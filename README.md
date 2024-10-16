@@ -10,6 +10,7 @@ This project focuses on fine-tuning the YOLOv8n model for detecting and classify
 - [Dataset Preparation](#dataset-preparation)
 - [Training the Model](#training-the-model)
 - [Project Structure](#project-structure)
+- [Summary](#summary)
 - [References](#references)
 
 ## Installation
@@ -93,6 +94,22 @@ To run the fine-tuning:
   ├── split_dataset.py            # Script to split dataset into train and validation sets
   ├── README.md                   # Project documentation
 ```
+
+## Summary
+
+The YOLOv8 model was trained for 382 epochs with a final performance of:
+
+- Precision (P): 0.65
+- Recall (R): 0.674
+- mAP@50: 0.704
+- mAP@50-95: 0.614
+
+While the model achieved reasonable performance metrics, the primary limitation was the dataset size. With only 4,072 images and 3,295 instances, the data proved insufficient to fully differentiate between 120 dog breeds. The limited dataset size likely prevented further improvement beyond the observed results.
+
+Additionally, the model was stopped early due to EarlyStopping criteria, where no significant improvement was observed after 50 epochs. The best model was saved at epoch 334 with the highest mAP@50 of 0.704.
+
+Due to technical constraints, it was not possible to expand the project further. However, the structure of the project has been designed in a way that allows for easy continuation by other contributors. With more training data and additional resources, the model could be fine-tuned further to improve accuracy and robustness in detecting and classifying dog breeds.
+
 
 ## References
 
