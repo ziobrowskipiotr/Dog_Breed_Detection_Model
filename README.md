@@ -17,10 +17,23 @@ This project focuses on fine-tuning the YOLOv8n model for detecting and classify
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo/dog-breed-detection-yolov8.git
+   git clone git@github.com:ziobrowskipiotr/Dog_Breed_Detection_Model.git
    cd Dog_Breed_Detection_Model
    ```
-2. **Download the YOLOv8 pre-trained model: YOLOv8 can be used with a pre-trained model on the COCO dataset, where class 16 corresponds to dogs:**
+
+2. In the [Data release](https://github.com/ziobrowskipiotr/Dog_Breed_Detection_Model/releases/tag/Data), you can find the following files:
+
+- **Images.zip**: Contains over 16,000 labeled images of dog breeds, which are used to train the YOLOv8 model.
+- **example_prep_data.zip**: Contains sample pre-processed data, which showcases how the images were prepared for the model.
+
+### How to Use
+
+1. Download the `data.zip` from the [Data release](https://github.com/ziobrowskipiotr/Dog_Breed_Detection_Model/releases/tag/Data).
+2. Extract the `data.zip` file, which includes:
+   - `Images.zip` – the full dataset of labeled dog breed images.
+   - `example_prep_data.zip` – example data prepared for training.
+   - Make sure to extract `Images.zip` to your desired working directory before starting the training process.
+3. **Download the YOLOv8 pre-trained model: YOLOv8 can be used with a pre-trained model on the COCO dataset, where class 16 corresponds to dogs:**
    ```bash
    from ultralytics import YOLO
    model = YOLO('yolov8n.pt')
